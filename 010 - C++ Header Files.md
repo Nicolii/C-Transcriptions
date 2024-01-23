@@ -4,7 +4,7 @@ My name is The Cherno, welcome back to my C++ series.
 So today, header files.  
 And we're actually we're actually out.  
 Started off is a great day then it started raining, but I decided to get out of town because...  
-So we're here somewhere in Australia then we're going to be talking about C++.  
+So we're here, somewhere in Australia, and we're going to be talking about C++.  
 Hope you guys don't start to think that header files are so boring that I felt the need to just get out of town to cover them, that's just what I just felt like doing.  
 Alright so header files.  
 What are they? Why do we need them? Why do they even exist in C++?  
@@ -31,7 +31,7 @@ So what does $Log.cpp$ actually need in order to not error us?
 How do we tell it that that `Log()` function does actually exist but it's just defined elsewhere?  
 That is where a function declaration comes in.  
 If we go back to our code here, I need to simply declare that `Log()` does exist.  
-If we go back to $Main.cpp$ and we take a look at this actual signature, you'll see that `Log()` is a function that returns voi,d and takes in one parameter which is a constant `char` pointer.  
+If we go back to $Main.cpp$ and we take a look at this actual signature, you'll see that `Log()` is a function that returns void and takes in one parameter which is a constant `char` pointer.  
 And some child is chasing the kangaroos... that's funny.  
 So this is the function signature, we can literally just copy this, go back to $Log.cpp$ paste this in and just close it with a semicolon.  
 The fact that this function doesn't actually have a body means that it is the declaration of the function, we haven't defined what the function actually is, what the function actually does.  
@@ -45,12 +45,12 @@ What if I what if I make some other file that needs to use this `Log()` function
 Does that mean that I also have to copy and paste this void log declaration everywhere I go?  
 The answer is yes, you actually do need to do that.  
 However there is a way to make that easier.  
-==how to file== [Header files]. Right?  
+Header files. Right?  
 What are header files?  
-What are ==pedophiles== [header files] traditionally I should say.  
-Because really this is ==syphilis== [C++] what you can you can do anything with anything.  
-But ==how to file== [header files] the usually files that get included into ==CBP== [$.cpp$] files.  
-So basically what we do is copy and paste the content of header files into $.cpp$ files, and we do that via the `#include` ==pre-press as the directors== [pre-processor directive].  
+What are header files traditionally, I should say.  
+Because really this is C++ what you can you can do anything with anything.  
+But header files the usually files that get included into $.cpp$ files.  
+So basically what we do is copy and paste the content of header files into $.cpp$ files, and we do that via the `#include` pre-processor directive.  
 So `#include` has the ability to copy and paste files into other files, and that is exactly what it seems that we need to do here.  
 We need to copy and paste this `Log()` declaration into every file that needs to use that `Log()` function.  
 So let's have a go at making a header file.  
@@ -78,7 +78,7 @@ Make sure that it matches the function signature that you've actually declared i
 So now everything seems well in the world.  
 I'm also going to go ahead and cut and paste this log definition into my $Log.cpp$ file, because that makes a lot more sense.  
 Now I get an error here telling me `cout` is not found, that's okay I can just `#include <iostream>`. Awesome.  
-So back in $Main.cpp$, if I run my program, we can see that we managed to initialize our log and then log "Hello World!" to the console. fantastic.  
+So back in $Main.cpp$, if I run my program, we can see that we managed to initialize our log, and then log "Hello World!" to the console. Fantastic.  
 All right, brilliant.  
 So let's go back to that header file and take a look at what that `#pragma once` statement actually was.  
 So here we have a statement that Visual Studio has seemingly inserted for us, called `#pragma once`, what is this?  
