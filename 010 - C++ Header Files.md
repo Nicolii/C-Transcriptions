@@ -54,7 +54,7 @@ So basically what we do is copy and paste the content of header files into $.cpp
 So `#include` has the ability to copy and paste files into other files, and that is exactly what it seems that we need to do here.  
 We need to copy and paste this `Log()` declaration into every file that needs to use that `Log()` function.  
 So let's have a go at making a header file.  
-I'm going to **RIGHT-CLICK** on $Header~Files$.  
+I'm going to **RIGHT-CLICK** on $Header Files$.  
 Now note these folders here are called filters, they're not actual real folders.  
 I can create a header file under source files.  
 There's going to be a few videos on how a Visual Studio works in the future, but for now just know these are kind of fake folders. It doesn't matter which one you **RIGHT-CLICK** on to create your header file.  
